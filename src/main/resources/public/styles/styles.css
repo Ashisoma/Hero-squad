@@ -1,0 +1,8 @@
+body{
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4 )),url("/images/justice.jpg")center/cover no-repeat fixed;
+
+}
+nav{
+    background-color: #7952b3;
+    color:white;
+}

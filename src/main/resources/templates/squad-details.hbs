@@ -1,0 +1,43 @@
+{{#partial "content"}}
+
+
+    <div class="container styling">
+        <div class="row">
+        <div class="col-md">
+            {{#if squads}}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{squads.squadName}}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{squads.squadCause}}</li>
+                    <li class="list-group-item">{{squads.squadSize}}</li>
+                </ul>
+                <a href="/delete-squad/{{squads.id}}" class="btn btn-danger">Delete</a>
+                <a href="/edit-squad/{{squads.id}}" class="btn btn-success">Edit</a>
+            </div>
+        </div>
+{{/if}}
+        </div>
+        <div class="col-md">
+            {{#if heroes}}
+                {{#each heroes}}
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{heroesName}}</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">{{superPower}}</li>
+                                <li class="list-group-item">{{weakness}}</li>
+                                <li class="list-group-item">{{age}}</li>
+                            </ul>
+                            <a href="/delete-hero/{{id}}" class="btn btn-danger">Delete</a>
+                            <a href="/edit-hero/{{id}}" class="btn btn-success">Edit</a>
+                        </div>
+                    </div>
+                {{/each}}
+
+            {{/if}}
+        </div>
+    </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

@@ -1,0 +1,23 @@
+{{#partial "content"}}
+    <div class="styling container">
+    <h2>Heroes.</h2>
+    {{#if heroes}}
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{heroes.heroName}}</h5>
+                    <ul class="list-group list-group-flush">
+                        <h5 class="card-title">{{heroes.heroName}}</h5>
+                        <li class="list-group-item">{{heroes.superPower}}</li>
+                        <li class="list-group-item">{{heroes.weakness}}</li>
+                        <li class="list-group-item">{{heroes.age}}</li>
+                    </ul>
+                    <a href="/delete-hero/{{heroes.id}}" class="btn btn-danger">Delete</a>
+                    <a href=/edit-hero/{{heroes.id}}" class="btn btn-success">Edit</a>
+                </div>
+            </div>
+        </div>
+
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

@@ -1,0 +1,78 @@
+<!---->
+{{#partial "content"}}
+    <div class="styling">
+
+{{#if edit}}
+    <div class="container ">
+    <div class="form-group">
+
+
+        <form action="/edit-hero/{{hero.id}}" method="post" >
+            <div class="form-group">
+                <label for="formGroupExampleInput">Hero Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{heroes.heroesName}}" placeholder="Hero name" required>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Power</label>
+                <input type="text" class="form-control" id="power" name="power" value="{{heroes.superPower}}" placeholder="Power" required>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Weakness</label>
+                <input type="text" class="form-control" id="weakness" name="weakness" value="{{heroes.weakness}}" placeholder="Weakness" required>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Age</label>
+                <input type="number" class="form-control" id="age" name="age" value="{{heroes.age}}" placeholder="age" required>
+            </div>
+            <div class="form-group">
+                <label for="squad">Squad</label>
+                <select class="form-control" id="squad" name="squad" required>
+                    {{#if squads}}
+                        {{#each squads}}
+                            <option value="{{id}}">{{squadName}}</option>
+                        {{/each}}
+                    {{/if}}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+    </div>
+{{else}}
+    <div class="form-group">
+        <form action="/add-hero" method="post" >
+            <div class="form-group">
+                <label for="formGroupExampleInput">Hero Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Hero name">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Power</label>
+                <input type="text" class="form-control" id="power" name="power" placeholder="Power">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Weakness</label>
+                <input type="text" class="form-control" id="weakness" name="weakness" placeholder="Weakness">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="age">
+            </div>
+            <div class="form-group">
+                <label for="squad">Squad</label>
+                <select class="form-control" id="squad" name="squad">
+                    {{#if squads}}
+                        {{#each squads}}
+                            <option value="{{id}}">{{squadName}}</option>
+                        {{/each}}
+                    {{/if}}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+    </div>
+    </div>
+
+{{/if}}
+</div>
+{{/partial}}
+
+{{> layout.hbs}}

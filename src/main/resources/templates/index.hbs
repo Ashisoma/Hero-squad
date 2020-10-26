@@ -1,0 +1,37 @@
+{{#partial "content"}}
+    <div class="styling"></div>
+<div class="row styling">
+    {{#if squads}}
+    <div class="card-deck col">
+        <div class="card">
+        {{#each squads}}
+            <div class="card-body">
+                <h5 class="card-title">{{squadName}}</h5>
+                <p class="card-text">{{squadCause}}</p>
+                <p class="card-footer"><a href="/squads/{{id}}" class="btn btn-primary">Squad Details</a></p>
+                <p class="card-text"></p>
+            </div>
+        {{/each}}
+        </div>
+    {{/if}}
+    </div>
+    <div class="card-deck col">
+    {{#if heroes}}
+        <div class="card">
+        {{#each heroes}}
+            <div class="card-body">
+                <h5 class="card-title">{{heroesName}}</h5>
+                <p class="card-text">{{superPower}}</p>
+                <p class="card-footer"><a href="/heroes/{{id}}" class="btn btn-primary">Hero Details</a></p>
+                <p class="card-text"></p>
+            </div>
+            {{/each}}
+        </div>
+    {{/if}}
+    </div>
+</div>
+
+
+
+{{/partial}}
+{{> layout.hbs}}

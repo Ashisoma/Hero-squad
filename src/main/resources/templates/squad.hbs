@@ -1,0 +1,20 @@
+{{#partial "content"}}
+<div class="container styling">
+    <form action="/add-squad" method="post" >
+        <div class="form-group">
+            <label for="formGroupExampleInput">Squad Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Squad name">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Cause</label>
+            <input type="text" class="form-control" id="cause" name="cause" placeholder="Cause">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Size</label>
+            <input type="number" class="form-control" id="size" name="size" placeholder="size">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+</div>
+{{/partial}}
+{{> layout.hbs}}
