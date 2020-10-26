@@ -19,3 +19,7 @@ hero team.
 - Heroku CLI
 - Intellij Idea
 
+## Contribution
+- You can fork the repo and add your extra feature to the web app. Click on the following link to fork:
+  https://github.com/Ashisoma/Hero-squad
+  
